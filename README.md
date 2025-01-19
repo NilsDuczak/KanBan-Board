@@ -14,5 +14,5 @@ A simple and user-friendly Kanban board to help you organize and manage your tas
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/<USERNAME>/kanban-project.git
+   git clone https://github.com/NilsDuczak/kanban-project.git
    cd kanban-project
