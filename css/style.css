@@ -1,0 +1,149 @@
+.kanban {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: rgb(158, 157, 157);
+  border-radius: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kanban * {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.kanban-column {
+  flex: 1 1 250px;
+  margin: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-column-title {
+  padding: 15px;
+  font-size: 18px;
+  color: #333;
+  background: #f4f4f4;
+  font-weight: bold;
+  user-select: none;
+  text-align: center;
+}
+
+.kanban-item-input {
+  padding: 10px 15px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: calc(100% - 30px);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.kanban-item-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+.kanban-item-input:hover {
+  cursor: grab;
+}
+.kanban-dropzone {
+  height: 12px;
+  background: #e6e6e6;
+  transition:
+    background-color 0.3s,
+    height 0.3s;
+}
+
+.kanban-dropzone--active {
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.kanban-add-item {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background: rgb(61, 61, 61);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.kanban-add-item:hover {
+  background: #2980b9;
+}
+
+@media (max-width: 1200px) {
+  .kanban-column-title {
+    font-size: 16px;
+  }
+  .kanban-item-input {
+    font-size: 14px;
+  }
+  .kanban-add-item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .kanban-column {
+    margin: 10px;
+  }
+  .kanban-column-title {
+    font-size: 14px;
+  }
+  .kanban-item-input {
+    font-size: 13px;
+  }
+  .kanban-add-item {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban {
+    padding: 10px;
+  }
+  .kanban-column {
+    margin: 10px 0;
+    flex: 1 1 100%;
+  }
+  .kanban-column-title {
+    font-size: 14px;
+  }
+  .kanban-item-input {
+    font-size: 12px;
+  }
+  .kanban-add-item {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .kanban-column {
+    margin-bottom: 15px;
+  }
+  .kanban-column-title {
+    font-size: 12px;
+  }
+  .kanban-item-input {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .kanban-add-item {
+    font-size: 12px;
+  }
+}
